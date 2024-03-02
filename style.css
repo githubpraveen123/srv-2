@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+    
 }
 :root{
     /*background color*/
@@ -17,8 +21,6 @@
 
 
     /* text style*/
-    --primary-font:'robot slab',serif;
-    --secondary-font: 'Quicksand';
     --primary-text:#004caa;
     --secondary-text:#fc5185;
     --text-white:#fff;
@@ -29,7 +31,7 @@
 
 body{
 background-color: var(--bg-white);
-font-family: sans-serif;
+font-family: "Quicksand", sans-serif;
 overflow-x: hidden;
 }
 
@@ -52,7 +54,7 @@ a{
 }
 .main-btn{
     display: inline-block;
-    border: .0625rem solid var(--bg-white);
+    
     color: var(--bg-white);
     text-align: center;
     padding: .75rem 1.375rem;
@@ -61,6 +63,7 @@ a{
     text-transform:capitalize;
     border-radius: .1875rem;
     transition: all 0.3s ease-in-out;
+    font-family: var(--secondary-font);
 }
 .main-btn:hover{
     background-color: var(--secondary-color);
@@ -77,7 +80,7 @@ a{
     border-color: var(--bg-white);
     color: var(--text-black);
 }
-.h1{
+/* .h1{
     font-size: 3.875rem;
     margin-bottom: 1.25rem;
     font-weight: 600;
@@ -120,7 +123,7 @@ a{
     margin-bottom: .9375rem;
     text-transform: uppercase;
     font-family: var(--secondary-font);
-}
+} */
 p{
     font-size: 1rem;
     color: var(--text-gray);
@@ -134,6 +137,11 @@ p{
     border: 2px solid white;
 
 } 
+
+.Acard{
+    display: flex;
+    width: 100%;
+}
 
 
 .header_wrapper .navbar{
@@ -173,9 +181,10 @@ p{
     box-shadow: .5084rem 2.5rem 0 rgb(0 0 0 /8%);
     transition: 0.3s ease-in-out;
 }
+
 .cbtn{
     width: 17%;
-    background-color: #e57c7c;
+    background-color: #F09303;
     margin-right: 820px;
     margin-bottom: 0;
 }
@@ -193,18 +202,22 @@ p{
 }
 .car h5{
     text-align: start;
-    font-size: 40px;
+    font-size: 40px;        
     font-family: var(--secondary-font);
 }
 .Cont{
-    border: 2px solid#e57c7c;
     border-radius: 5px;
     padding:0 7px ;
-    background-color:#e57c7c;
+    background-color:#F09303;
 }
-.about_wrapper h2 {
-    color: #191057;
+
+    
+.aboutPar{
+    color: #484848;
+    font-family: "Jost", sans-serif;
+   
 }
+
 
 .home .card:hover{
     -webkit-transform: translateY(-0625rem);
@@ -234,64 +247,69 @@ img, svg {
 }
 .about_wrapper  .about-num{
     flex: 0 0 auto;
-    width: 50%;
-}
-.about_wrapper .about-clinic:nth-child(1),
-.about_wrapper .about-clinic:nth-child(2){
-    margin-bottom: 2.8125rem;
-}
-.about_wrapper .about-clinic:nth-child(2),
-.about_wrapper .about-clinic:nth-child(4){
-    padding-left: 3.75rem;
-}   
-.about_wrapper .Line-1,
-.about_wrapper .Line-2{
-    content: '';
-    position:absolute;
-    left: 50%; 
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: .0313rem;
-    height: 100%;
-    background: var(--bg-dark);
-}
-.about_wrapper .Line-2{
     width: 100%;
-    height: .0625rem;
+    padding-right:50px;
+    
 }
-.about_wrapper .about-animate{
-    position: absolute;
-    left: -2.5rem;
-    bottom: 0;
-    -webkit-animation: movebounce 3s linear infinite;
-    animation: movebounce 3s linear infinite;
+.about-num h1{
+font-family: "Jost", sans-serif;
+color: #312584;
+
 }
+.about-num p{
+    font-family: "Jost", sans-serif;
+    color: #484848;
+    
+}
+
 
 .trust{
     margin-left: 550px;
     align-items: center;
+    font-size: 24px;
+}
+
+.block1{
+    width: 60%;
+    margin-left: -60px;
 }
 
 .block{
     width:50%;
-    padding:60px;
+    margin-left: 30px;
+padding-top: 60px
+}  
+.brands{
+    width: 90%;
+    margin-left: -30px;
+} 
+.brands img{
+    padding: 30px;
 }
+.BrandTitle{
+    color: #8F8F8F;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .color{
     color: white;
-    margin-top: 20px;   
+    width: 87%;
+   
 }
 .color p{
     color: white;
+
 }
-
-
 .easy_step_box {
     background-color:#312584;
-    padding-top: 18px;
+    padding: 10px;
     display: flex;
     font-family: Poppins;
     border: 1px solid #fff;
     border-radius: 10px;
+   
 }
 
 .easy_step_box h5 {
@@ -312,16 +330,35 @@ img, svg {
 
 
 .bg{
-    background-image: url(Bg.png);
+   width: 50%;
+
 }
 .icon{
     width: 70px;
-    margin-left: 90px;
+    margin-left: 110px;
     position: relative;
     bottom: -30px;
 
 }
-
+.icon-box img{
+    width: 100%;
+    
+}
+.servic{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+   
+}
+.text-bla{
+    color: #312584;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
+.Stext{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 .team_wrapper .card{
     padding: 1.25rem;
 }
@@ -333,6 +370,25 @@ img, svg {
     margin: 0 auto; 
 }
 
+.text-black{
+    color: #2B2B2B;
+    font-weight: 400;
+   
+}
+.text-black span{
+    color: #312584;
+    font-weight: 600;
+}
+.speakerBtn{
+    color: #312584;
+    border-color: #F09303;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    border-radius: 5px;
+    width: 180px;
+}
+
+
 .gallery_wrapper{
     background-image: url(images/gallery/gallery-background.png);
     background-repeat: no-repeat;
@@ -340,31 +396,52 @@ img, svg {
     background-size: cover;
 }
 .testimonial_wrapper{
-    background-color: rgba(252, 81,133, .05);
+    background-color:#E8E7F1;
+}
+.testimalPar{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    color: #312584;
+}
+.testimalPar2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: #2B2B2B;
+}
+.Testimal-author h5{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color:#0B0BA0 ;
+    margin-left: 30px;
+}
+.Testimal-author p{
+    margin-left: 30px;
+    color: #000000;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-
-.appointment_wrapper{
-    background-color: #EEEEEE;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
 .blog_wrapper .blog-content{
-    background-color:#EEEEEE;
+    text-align: center;
+    width: 120%;
+    background-color:#F4F4F4;
     padding: 2.5rem;
 }
 
 .read{
     margin-top: 30px;
     width: 200px;
-    border: 2px solid white;
+    border: 1px solid white;
     padding-left: 65px;
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 .accordion .accordion-item{
     border-bottom: 1px solid #999999;
@@ -394,6 +471,9 @@ img, svg {
    position: relative;
    margin-bottom: -30px;
    margin-top: 60px;
+   font-family: "Quicksand", sans-serif;
+   font-weight: 500;
+   
 }
 .back1 h5{
 font-size: 40px;
@@ -406,6 +486,9 @@ color: white;
     background-color: #312584;
     padding: 30px;
 }
+.footStyle p{
+    color: white;
+}
 
 
 .navbar-brand img{
@@ -416,20 +499,16 @@ color: white;
     background-color: #312584;
 }
 .services h2{
-    text-align: center;
-    font-family: Quicksand;
-    font-size: 52px;
-    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+   font-size:52px;
     color: #FFFFFF;
+    text-align: center;
 }
-
 .search-box{
-    width: 320px;
+    width: 310px;
     border-radius: 5px;
     background:#F09303 ;
-    border: 2px solid #F09303;
     padding: 10px;
-    text-align: center;
     margin-top:20px;
     margin-left: 430px;
     
@@ -437,31 +516,56 @@ color: white;
 
 .search-box button{
     border: none;
-    
+    background: transparent;
+    color: white;   
 }
+
 .typp{
     border: none;
     outline: none;
-    
+    background: transparent;
+    font-family: "Quicksand", sans-serif;  
 }
+
 .Scards{
     margin: 50px;
     
-}
+}   
 .head{
     width: 100%;
     text-align: center;
     margin-left: 30px;
+    
 }
 .head p{
     color: #000000;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+      
 }
 .head h1{
     color:#312584;
+    font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;  
+}
+.head .OurServicePar{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
 .card-tittle h3{
     color: #312584;
-    font: weight 400px;
+    font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  padding-top: 20px;
+    
+    
 }
 .cardBtn{
     padding: 10px;
@@ -528,10 +632,26 @@ text-align: center;
     color:#312584;
     font-family: sans-serif;
 }
+.card-body{
+    margin-left: 30px;
+    width: 250px;
+}
 .card-title h3{
     color: #312584;
     font: weight 400px;
     margin-top: 20px;
+}
+.card-tittle span{
+    color: #4A4A4A;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.card-tittle p{
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 .Pcard{
     width: 400px;
@@ -582,14 +702,19 @@ row-gap: 5px;
 }
 .Fpar{
     text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color:#393939;
 }
 
 .Ftitle{
-    font-family: sans-serif;
     text-align: center;
     margin-bottom: 30px;
     color: #312584;
-    font-family: sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+ 
+    
 }
 
 
@@ -611,9 +736,11 @@ row-gap: 5px;
     }
     .title-question{
         margin: 1.4rem 0rem;
-        font-size: 20px;
+        font-size: 24px;
+        font-family: "Poppins", sans-serif;
         font-weight: 500;
-        color: #000;
+        font-style: normal;
+
 
     }
     .question-btn{
@@ -628,9 +755,13 @@ row-gap: 5px;
     }
 
     .answer {
-        font-size: 1.2rem;
-        line-height: 1.8;
+        font-size: 20px;
+        line-height: 1.8rem;
         display: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+      
+    
     }
     .show-text .answer{
         display: block;
@@ -644,7 +775,7 @@ row-gap: 5px;
     
     .question-answer{
         width: 380px;
-        border-bottom: 1px solid #e8e8e8;
+        border-bottom: 1px solid #999999;
     }
 
     /* @media screen and (min-width:992px){
